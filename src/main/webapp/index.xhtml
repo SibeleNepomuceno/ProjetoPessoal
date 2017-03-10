@@ -8,12 +8,32 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
+        <h:form>
+            <fieldset>
+                <legend>Informações pessoais</legend>
 
-        <br />
-        <p:panel header="Barber Bel" footer="www.barberbel.com.br" toggleable="true" toggleOrientation="vertical">
-            <h:outputLabel> #{helloBean.message}</h:outputLabel> <br />
-            <p:button value="Enviar"/>
-            </p:panel>
+                <h:panelGrid columns="2">
+
+                    <h:outputLabel value="Nome:" for="titulo"/>
+                    <h:inputText id="titulo"/>
+
+                    <h:outputLabel value="Idade" for="idade"/>
+                    <h:inputText id="idade"/>
+
+                    <h:outputLabel value="CPF" for="cpf"/>
+                    <h:inputText id="cpf"/>
+
+                    <h:commandButton value="Enviar" action="#{dadosPessoaisBeans.enviar}"/>
+                </h:panelGrid>
+            </fieldset>
+        </h:form>
+
+
+        <p:panel id="painelHSF" header="Painel Hsf">Arraste-me</p:panel>
+
+        <p:draggable for="painelHSF"/>
+
     </h:body>
+
 </html>
 

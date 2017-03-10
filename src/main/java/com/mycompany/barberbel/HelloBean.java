@@ -17,6 +17,6 @@ import javax.faces.bean.RequestScoped;
 @RequestScoped
 public class HelloBean {
     public String getMessage(){
-        return "Hello JSF + MAVEN";
+        return "Barbearia Barber Bel";
     }
 }
